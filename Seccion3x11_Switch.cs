@@ -18,13 +18,18 @@ namespace Seccion3
             switch (color)
             {
                 case "Red":
-                    Console.WriteLine("El gódigo RGB para {0} es: 255, 0, 0", color);
+                case "RED":
+                case "red":
+                    Console.WriteLine("El código RGB para {0} es: 255, 0, 0", color);
                     break;
                 case "Green":
-                    Console.WriteLine("El gódigo RGB para {0} es: 0, 255, 0", color);
+                    Console.WriteLine("El código RGB para {0} es: 0, 255, 0", color);
                     break;
                 case "Blue":
-                    Console.WriteLine("El gódigo RGB para {0} es: 0, 0, 255", color);
+                    Console.WriteLine("El código RGB para {0} es: 0, 0, 255", color);
+                    break;
+                default:
+                    Console.WriteLine("El código RGB no se ha encontrado para {0}",color);
                     break;
             }
         }
