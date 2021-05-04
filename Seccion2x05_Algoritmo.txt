@@ -1,0 +1,29 @@
+===== ALGORITMO =====
+
+INICIO
+
+1. Pedir altura del rectángulo
+2. Pedir ancho del rectángulo
+3. Calcular área multiplicando alto por ancho
+4. Calcular el perímetro sumando los cuatro lados
+5. Mostrar área
+6. Mostrar perímetro
+
+FIN
+
+===== PSEUDOCÓDIGO =====
+
+INICIO
+
+Variables:
+	altura, ancho, area, perimetro : double
+Escribir ("Introducir altura: ")
+Leer (altura)
+Escribir ("Introducir ancho: ")
+Leer (ancho)
+area <- altura * ancho
+perimetro <- 2(altura + ancho)
+Escribir ("El área es: ", area)
+Escribir ("El perómetro es: ", perimetro)
+
+FIN
