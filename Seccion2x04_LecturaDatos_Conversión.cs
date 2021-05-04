@@ -25,10 +25,8 @@ namespace Seccion2
             //=== CONVERTIR CADENA A TIPO NUMÉRICO ===
             //Pregunta al usuario el número
             Console.Write("Escribe un número para sumarlo: ");
-            entrada = Console.ReadLine();
-
-            //Se le asigna a num2 la conversión de la cadena a int
-            num2 = Convert.ToInt32(entrada);
+            num2 = Convert.ToInt32(Console.ReadLine());
+            
             //num2 = Int32.Parse(entrada); También es válido
             resultado = num1 + num2;
             Console.WriteLine("El resultado es: {0}", resultado);
