@@ -12,6 +12,8 @@ namespace Seccion7
         {
             Automovil auto = new Automovil();
             auto.Acelerar();
+            //Un objeto no puede acceder a los métodos estáticos, por lo que se debe calificar con un nombre de tipo
+            Automovil.Prueba();
         }        
     }
 
@@ -27,6 +29,8 @@ namespace Seccion7
         {
             bool acelerar = true;
             Console.WriteLine("El auto está acelerando");
+            //Un método estático puede llamarse desde otro de la misma clase
+            Prueba();
             return acelerar;
         }
 
@@ -41,6 +45,11 @@ namespace Seccion7
         {
             velocidad++;
             Console.WriteLine("Cambio de velocidad");
+        }
+
+        //Método estático
+        public static void Prueba(){
+        	Console.WriteLine("Este es un método estático");
         }
 
     }
