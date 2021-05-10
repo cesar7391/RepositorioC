@@ -42,8 +42,12 @@ namespace POO
 
             Calculadora Calculador1 = new Calculadora();
 
-            Calculador1.n1 = 55;
-            Calculador1.n2 = 45;
+            Console.Write("Introduce el valor 1: ");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Introduce el valor 2: ");
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            Calculador1.n1 = n1;
+            Calculador1.n2 = n2;
 
             Calculador1.Suma();
             Calculador1.Resultado();
