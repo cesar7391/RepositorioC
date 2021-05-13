@@ -11,52 +11,53 @@ namespace Examen
     {
         static void Main(string[] args)
         {
-            int[,] matriz = new int [,] { { 1, 2, 3 },
-                                          { 4, 5, 6 },
-                                          { 7, 8, 9} };
-            
-            /*int[,] matriz2 = new int[,] { { 1, 2, 3, 4 },
-                                          { 5, 6, 7, 8 },
-                                          { 9, 10, 11, 12},
-                                          { 13, 14, 15, 16} };
-            */
+            int[][] matriz = {
+                new int[] {1, 2, 3},
+                new int[] {4, 5, 6},
+                new int[] {7, 8, 9},
+                new int[] {10,11,12}
+            };
 
-            int[,] matriz180 = new int[matriz.GetLength(0),matriz.GetLength(1)];
-
-            matriz180 = VoltearMatriz(matriz, matriz180);
+            int[][] matriz180 = VoltearMatriz180(matriz);
 
             Console.WriteLine("MATRIZ DE ENTRADA: ");
             ImprimirMatriz(matriz);
 
             Console.WriteLine("MATRIZ DE SALIDA: ");
             ImprimirMatriz(matriz180);
+
         }
 
-        static void ImprimirMatriz(int[,] matriz)
+        static void ImprimirMatriz(int[][] matriz)
         {
-            for (int i = 0; i < matriz.GetLength(0); i++)
+            for (int i = 0; i < matriz[0].Length; i++)
             {
-                for (int j = 0; j < matriz.GetLength(1); j++)
+                for (int j = 0; j < matriz[i].Length; j++)
                 {
-                    Console.Write(matriz[i, j] + " ");
+                    Console.Write(matriz[i][j] + " ");
                 }
                 Console.WriteLine();
             }
             Console.WriteLine();
         }
 
-        static int[,] VoltearMatriz(int[,] matrizOriginal, int[,] matrizNueva)
+        static int[][] VoltearMatriz180(int[][] matriz)
         {
-            for (int i = 0; i < matrizOriginal.GetLength(0); i++)
+            int N = matriz[1].Length;
+            int M = matriz[0].Length;
+
+            int[][] matriz180 = new int[M][];
+
+            for (int i = 0; i < matriz180.Length; i++)            
+                matriz180[i] = new int[N];
+            
+            for (int i = 0; i < N; i++)
             {
-                for (int j = 0; j < matrizOriginal.GetLength(1); j++)
-                {
-                    int aux = i + 1;
-                    matrizNueva[matrizOriginal.GetLength(0) - aux, j] = matrizOriginal[j, i];
-                }
+                for (int j = 0; j < M; j++)                
+                    matriz180[M - j - 1][i] = matriz[i][j];                
             }
 
-            return matrizNueva;
+            return matriz180;
         }
     }
 }

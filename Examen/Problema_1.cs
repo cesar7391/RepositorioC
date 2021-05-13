@@ -11,7 +11,7 @@ namespace Examen
         static void Main(string[] args)
         {
             int[] arreglo = { 45, 123, 12, 15, 20, 46, 89, 129 };
-            int valorMaximo = 0, valorMinimo = int.MaxValue;
+            int valorMaximo = int.MinValue, valorMinimo = int.MaxValue;
             
             for(int i = 0; i < arreglo.Length; i++)
             {
